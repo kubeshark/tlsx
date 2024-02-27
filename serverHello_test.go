@@ -4,8 +4,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/google/gopacket"
-	"github.com/google/gopacket/layers"
+	"github.com/kubeshark/gopacket"
+	"github.com/kubeshark/gopacket/layers"
 )
 
 func TestServerHello(t *testing.T) {
@@ -20,6 +20,7 @@ func TestServerHello(t *testing.T) {
 	hello := GetServerHello(p)
 	if hello == nil {
 		t.Fatal("hello should not be nil")
+		return
 	}
 
 	if hello.Vers != 771 {
@@ -47,6 +48,7 @@ func TestServerHello(t *testing.T) {
 	hello = GetServerHello(p)
 	if hello == nil {
 		t.Fatal("hello should not be nil")
+		return
 	}
 
 	if hello.Vers != 771 {
@@ -76,6 +78,7 @@ func TestGetServerHelloBasic(t *testing.T) {
 	hello := GetServerHelloBasic(p)
 	if hello == nil {
 		t.Fatal("hello should not be nil")
+		return
 	}
 
 	if hello.Vers != 771 {
@@ -103,6 +106,7 @@ func TestGetServerHelloBasic(t *testing.T) {
 	hello = GetServerHelloBasic(p)
 	if hello == nil {
 		t.Fatal("hello should not be nil")
+		return
 	}
 
 	//fmt.Println( hello.Extensions)

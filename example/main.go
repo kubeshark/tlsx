@@ -8,10 +8,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/google/gopacket"
-	"github.com/google/gopacket/layers"
-	"github.com/google/gopacket/pcap"
-	"github.com/dreadl0ck/tlsx"
+	"github.com/kubeshark/gopacket"
+	"github.com/kubeshark/gopacket/layers"
+	"github.com/kubeshark/gopacket/pcap"
+	"github.com/kubeshark/tlsx"
 )
 
 func main() {
